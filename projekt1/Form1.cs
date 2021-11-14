@@ -16,5 +16,30 @@ namespace projekt1
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zakladniKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pozadiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
