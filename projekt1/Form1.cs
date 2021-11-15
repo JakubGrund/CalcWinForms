@@ -21,6 +21,8 @@ namespace projekt1
             InitializeComponent();
         }
 
+        // nastaveni velikosti oken 
+
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -28,61 +30,16 @@ namespace projekt1
             textBox1.Width = 288;
             
         }
-
-        private void zakladniKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void zaklaniKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Width = 327;
             textBox1.Width = 288;
-        }
-
-        private void pozadiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void vedeckaKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Width = 629;
             textBox1.Width = 590;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -90,7 +47,6 @@ namespace projekt1
         {
             this.Width = 1026;
             textBox1.Width = 590;
-
         }
 
         private void prevodJednotekToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,6 +61,8 @@ namespace projekt1
             textBox1.Width = 590;
         }
 
+        //zakladni kalkulacka
+
         private void button_Click(object sender, EventArgs e)
         {
             //podminky textove pole, cislice 0-9 + "."
@@ -112,13 +70,67 @@ namespace projekt1
             if ((textBox1.Text == "0") || (enter_value))
                 textBox1.Text = "";
             enter_value = false;
+
             Button num = (Button)sender;
-            if (num.Text == "") 
+            if (num.Text == ".")
             {
                 if (!textBox1.Text.Contains("."))
                     textBox1.Text = textBox1.Text + num.Text;
             }
-            else textBox1.Text = textBox1.Text + num.Text;
+            else
+                textBox1.Text = textBox1.Text + num.Text;
         }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //button Space
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            }
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "0";
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //button CE 
+            textBox1.Text = "0";
+            lblShowOp.Text = "";
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //button C
+            textBox1.Text = "0";
+            lblShowOp.Text = "";
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+    
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+       
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
+     
     }
 }
+
