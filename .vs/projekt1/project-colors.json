@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Ostatní soubory",
       "ColorIndex": -1
+    },
+    "b67d058f-5469-41b3-addd-7f0c2b94fd89": {
+      "ProjectGuid": "b67d058f-5469-41b3-addd-7f0c2b94fd89",
+      "DisplayName": "WindowsFormsCalc",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

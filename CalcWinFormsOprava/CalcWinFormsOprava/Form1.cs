@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projekt1
+namespace CalcWinFormsOprava
 {
     public partial class Form1 : Form
     {
@@ -21,16 +21,16 @@ namespace projekt1
             InitializeComponent();
         }
 
+
         /* VELIKOSTI OKEN REZIMU*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            this.Width = 495;
-            textBox1.Width = 456;
-
+            this.Width = 326;
+            textBox1.Width = 288;
         }
-        private void zaklaniKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void zakladniKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Width = 326;
             textBox1.Width = 288;
@@ -38,14 +38,13 @@ namespace projekt1
 
         private void vedeckaKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Width = 495;
-            textBox1.Width = 456;
-
+            this.Width = 509;
+            textBox1.Width = 467;
         }
 
-       /*ZAKLADNI KALKULACKA*/
+        /*ZAKLADNI KALKULACKA*/
 
-        private void button_Click(object sender, EventArgs e)
+        private void ButtonValue(object sender, EventArgs e)
         {
             //podminky textove pole, cislice 0-9 + "."
 
@@ -63,20 +62,21 @@ namespace projekt1
                 textBox1.Text = textBox1.Text + num.Text;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ButtonCE_Click(object sender, EventArgs e)
         {
             //button CE 
             textBox1.Text = "0";
             lblShowOp.Text = "";
         }
-        private void button3_Click(object sender, EventArgs e)
+
+        private void ButtonC_Click(object sender, EventArgs e)
         {
             //button C
             textBox1.Text = "0";
             lblShowOp.Text = "";
         }
 
-        private void buttonSpace_Click(object sender, EventArgs e)
+        private void ButtonSpaceBack_Click_1(object sender, EventArgs e)
         {
             // button space vrati o jednu hodnotu zpet
 
@@ -84,18 +84,12 @@ namespace projekt1
             {
                 textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
             }
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "0";
+            }
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            // button +-
-
-            results = double.Parse(textBox1.Text);
-            results = results * -1;
-            textBox1.Text = results.ToString();
-        }
-
-        private void AritmeticOperator(object sender, EventArgs e)
+        private void ButtonClick(object sender, EventArgs e)
         {
             // aritmeticke operatory +,-,/,*
 
@@ -106,7 +100,17 @@ namespace projekt1
             lblShowOp.Text = System.Convert.ToString(results) + "" + operation;
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void ButtonPlusMinus_Click(object sender, EventArgs e)
+        {
+            // button +-
+
+            results = double.Parse(textBox1.Text);
+            results = results * -1;
+            textBox1.Text = results.ToString();
+        }
+
+
+        private void ButtonRovnase_Click(object sender, EventArgs e)
         {
             // button vyhodnoceni pomoci switche 
 
@@ -130,14 +134,6 @@ namespace projekt1
 
         /*VEDECKA KALKULACKA*/
 
-
-        private void ButtonPi_Click(object sender, EventArgs e)
-        {
-            // button Pi hodnota
-
-            textBox1.Text = "3.14159265358997632";
-        }
-
         private void ButtonLog_Click(object sender, EventArgs e)
         {
             // button Log 
@@ -146,7 +142,6 @@ namespace projekt1
             lblShowOp.Text = System.Convert.ToString("log" + "(" + (textBox1.Text) + ")");
             ilog = Math.Log10(ilog);
             textBox1.Text = System.Convert.ToString(ilog);
-
         }
 
         private void ButtonSin_Click(object sender, EventArgs e)
@@ -157,10 +152,9 @@ namespace projekt1
             lblShowOp.Text = System.Convert.ToString("sin" + "(" + (textBox1.Text) + ")");
             qSin = Math.Sin(qSin);
             textBox1.Text = System.Convert.ToString(qSin);
-
         }
 
-        private void button30_Click(object sender, EventArgs e)
+        private void ButtonCos_Click(object sender, EventArgs e)
         {
             // button Cos 
 
@@ -168,7 +162,6 @@ namespace projekt1
             lblShowOp.Text = System.Convert.ToString("cos" + "(" + (textBox1.Text) + ")");
             qCos = Math.Cos(qCos);
             textBox1.Text = System.Convert.ToString(qCos);
-
         }
 
         private void ButtonTan_Click(object sender, EventArgs e)
@@ -181,7 +174,14 @@ namespace projekt1
             textBox1.Text = System.Convert.ToString(qtan);
         }
 
-        private void ButtonDouble2_Click(object sender, EventArgs e)
+        private void ButtonPi_Click(object sender, EventArgs e)
+        {
+            // button Pi hodnota
+
+            textBox1.Text = "3.14159265358997632";
+        }
+
+        private void ButtonX2_Click(object sender, EventArgs e)
         {
             // button x2
 
@@ -199,10 +199,9 @@ namespace projekt1
 
             a = Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text);
             textBox1.Text = System.Convert.ToString(a);
-
         }
 
-        private void Button1x_Click(object sender, EventArgs e)
+        private void Button1X_Click(object sender, EventArgs e)
         {
             // button 1/x
 
@@ -232,28 +231,10 @@ namespace projekt1
             textBox1.Text = System.Convert.ToString(a);
         }
 
-        
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-    
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
        
-       
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-     
     }
+
+
 }
+
 

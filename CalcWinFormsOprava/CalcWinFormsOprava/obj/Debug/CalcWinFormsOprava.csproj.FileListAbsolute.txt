@@ -1,0 +1,11 @@
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\bin\Debug\CalcWinFormsOprava.exe.config
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\bin\Debug\CalcWinFormsOprava.exe
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\bin\Debug\CalcWinFormsOprava.pdb
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.csproj.AssemblyReference.cache
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.Form1.resources
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.Properties.Resources.resources
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.csproj.GenerateResource.cache
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.csproj.CoreCompileInputs.cache
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.exe
+C:\Users\Jakub\Desktop\CalcWinForm\CalcWinFormsOprava\CalcWinFormsOprava\obj\Debug\CalcWinFormsOprava.pdb

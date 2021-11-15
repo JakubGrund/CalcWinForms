@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projekt1", "projekt1\projekt1.csproj", "{A0DE6E77-061A-48CA-9CCC-D63CD3F0D167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsCalc", "WindowsFormsCalc\WindowsFormsCalc.csproj", "{B67D058F-5469-41B3-ADDD-7F0C2B94FD89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A0DE6E77-061A-48CA-9CCC-D63CD3F0D167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0DE6E77-061A-48CA-9CCC-D63CD3F0D167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0DE6E77-061A-48CA-9CCC-D63CD3F0D167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67D058F-5469-41B3-ADDD-7F0C2B94FD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67D058F-5469-41B3-ADDD-7F0C2B94FD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67D058F-5469-41B3-ADDD-7F0C2B94FD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67D058F-5469-41B3-ADDD-7F0C2B94FD89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
