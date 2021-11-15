@@ -129,13 +129,101 @@ namespace projekt1
             textBox1.Text = "3.14159265358997632";
         }
 
+        private void ButtonLog_Click(object sender, EventArgs e)
+        {
+            // button Log 
 
+            double ilog = Double.Parse(textBox1.Text);
+            lblShowOp.Text = System.Convert.ToString("log" + "(" + (textBox1.Text) + ")");
+            ilog = Math.Log10(ilog);
+            textBox1.Text = System.Convert.ToString(ilog);
 
+        }
 
+        private void ButtonSin_Click(object sender, EventArgs e)
+        {
+            // button Sin 
 
+            double qSin = Double.Parse(textBox1.Text);
+            lblShowOp.Text = System.Convert.ToString("sin" + "(" + (textBox1.Text) + ")");
+            qSin = Math.Sin(qSin);
+            textBox1.Text = System.Convert.ToString(qSin);
 
+        }
 
+        private void button30_Click(object sender, EventArgs e)
+        {
+            // button Cos 
 
+            double qCos = Double.Parse(textBox1.Text);
+            lblShowOp.Text = System.Convert.ToString("cos" + "(" + (textBox1.Text) + ")");
+            qCos = Math.Cos(qCos);
+            textBox1.Text = System.Convert.ToString(qCos);
+
+        }
+
+        private void ButtonTan_Click(object sender, EventArgs e)
+        {
+            // button Tan
+
+            double qtan = Double.Parse(textBox1.Text);
+            lblShowOp.Text = System.Convert.ToString("tan" + "(" + (textBox1.Text) + ")");
+            qtan = Math.Tan(qtan);
+            textBox1.Text = System.Convert.ToString(qtan);
+        }
+
+        private void ButtonDouble2_Click(object sender, EventArgs e)
+        {
+            // button x2
+
+            Double a;
+
+            a = Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text);
+            textBox1.Text = System.Convert.ToString(a);
+        }
+
+        private void ButtonX3_Click(object sender, EventArgs e)
+        {
+            // button x3
+
+            Double a;
+
+            a = Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text);
+            textBox1.Text = System.Convert.ToString(a);
+
+        }
+
+        private void Button1x_Click(object sender, EventArgs e)
+        {
+            // button 1/x
+
+            Double a;
+
+            a = Convert.ToDouble(1.0 / Convert.ToDouble(textBox1.Text));
+            textBox1.Text = System.Convert.ToString(a);
+        }
+
+        private void ButtonLnx_Click(object sender, EventArgs e)
+        {
+            // button ln x
+
+            double ilog = Double.Parse(textBox1.Text);
+            lblShowOp.Text = System.Convert.ToString("log" + "(" + (textBox1.Text) + ")");
+            ilog = Math.Log(ilog);
+            textBox1.Text = System.Convert.ToString(ilog);
+        }
+
+        private void ButtonPercentage_Click(object sender, EventArgs e)
+        {
+            // button procenta %
+
+            Double a;
+
+            a = Convert.ToDouble(textBox1.Text) / Convert.ToDouble(100);
+            textBox1.Text = System.Convert.ToString(a);
+        }
+
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -155,14 +243,8 @@ namespace projekt1
         {
 
         }
-
-        private void ButtonLog_Click(object sender, EventArgs e)
-        {
-            double ilog = Double.Parse(textBox1.Text);
-            ilog= Math.Log10(ilog);
-            textBox1.Text = System.Convert.ToString(ilog);
-            lblShowOp.Text = System.Convert.ToString("log" + "(" + (textBox1.Text) + ")");
-        }
+        
+   
     }
 }
 
