@@ -21,47 +21,29 @@ namespace projekt1
             InitializeComponent();
         }
 
-        // nastaveni velikosti oken 
+        /* VELIKOSTI OKEN REZIMU*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            this.Width = 327;
-            textBox1.Width = 288;
-            
+
+            this.Width = 495;
+            textBox1.Width = 456;
+
         }
         private void zaklaniKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Width = 327;
+            this.Width = 326;
             textBox1.Width = 288;
         }
 
         private void vedeckaKalkulackaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Width = 629;
-            textBox1.Width = 590;
+            this.Width = 495;
+            textBox1.Width = 456;
 
         }
 
-        private void teplotaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Width = 1026;
-            textBox1.Width = 590;
-        }
-
-        private void prevodJednotekToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Width = 1026;
-            textBox1.Width = 590;
-        }
-
-        private void nasobeniToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Width = 1026;
-            textBox1.Width = 590;
-        }
-
-        //zakladni kalkulacka
+       /*ZAKLADNI KALKULACKA*/
 
         private void button_Click(object sender, EventArgs e)
         {
@@ -81,20 +63,6 @@ namespace projekt1
                 textBox1.Text = textBox1.Text + num.Text;
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //button Space
-            if (textBox1.Text.Length > 0)
-            {
-                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
-            }
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "0";
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             //button CE 
@@ -107,6 +75,65 @@ namespace projekt1
             textBox1.Text = "0";
             lblShowOp.Text = "";
         }
+
+        private void buttonSpace_Click(object sender, EventArgs e)
+        {
+            // button space vrati o jednu hodnotu zpet
+
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1, 1);
+            }
+        }
+
+        private void AritmeticOperator(object sender, EventArgs e)
+        {
+            // aritmeticke operatory +,-,/,*
+
+            Button num = (Button)sender;
+            operation = num.Text;
+            results = Double.Parse(textBox1.Text);
+            textBox1.Text = "";
+            lblShowOp.Text = System.Convert.ToString(results) + "" + operation;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            // button vyhodnoceni pomoci switche 
+
+            lblShowOp.Text = "";
+            switch (operation)
+            {
+                case "+":
+                    textBox1.Text = (results + Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "-":
+                    textBox1.Text = (results - Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "*":
+                    textBox1.Text = (results * Double.Parse(textBox1.Text)).ToString();
+                    break;
+                case "/":
+                    textBox1.Text = (results / Double.Parse(textBox1.Text)).ToString();
+                    break;
+            }
+        }
+
+        /*VEDECKA KALKULACKA*/
+
+
+        private void ButtonPi_Click(object sender, EventArgs e)
+        {
+            // button Pi hodnota
+
+            textBox1.Text = "3.14159265358997632";
+        }
+
+
+
+
+
+
 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -129,8 +156,13 @@ namespace projekt1
 
         }
 
-      
-     
+        private void ButtonLog_Click(object sender, EventArgs e)
+        {
+            double ilog = Double.Parse(textBox1.Text);
+            ilog= Math.Log10(ilog);
+            textBox1.Text = System.Convert.ToString(ilog);
+            lblShowOp.Text = System.Convert.ToString("log" + "(" + (textBox1.Text) + ")");
+        }
     }
 }
 
